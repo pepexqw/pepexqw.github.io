@@ -1,12 +1,11 @@
-// Переключение тёмной темы (можно расширить)
+// Переключение темы (светлая/тёмная)
 const btn = document.getElementById('theme-toggle');
 
 btn.addEventListener('click', () => {
  document.body.classList.toggle('dark-theme');
 });
 
-// Можно добавить дополнительные эффекты или анимации при скролле
-// Например, плавное появление элементов при прокрутке
+// Можно добавить плавное появление элементов при скролле
 const sections = document.querySelectorAll('.section');
 
 const options = {
