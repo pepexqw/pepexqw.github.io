@@ -1,8 +1,15 @@
+/* Плавный скролл всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Основные стили */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #111;
     color: #fff;
+    cursor: url('https://cur.cursors-4u.net/programs/pro-2/pro186.ani'), auto;
 }
 
 .container {
@@ -22,30 +29,53 @@ nav ul {
     justify-content: center;
     gap: 15px;
     padding: 0;
+    margin: 20px 0;
 }
 
 nav a {
     color: #00ffcc;
     text-decoration: none;
     font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
 }
 
 nav a:hover {
+    background-color: #00ffcc22;
     text-decoration: underline;
+}
+
+main {
+    padding-bottom: 40px;
 }
 
 section {
     margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px #00ffcc44;
 }
 
+/* Секция погоды и времени */
+#info {
+    background: linear-gradient(135deg, #002222, #111);
+    color: #00ffee;
+    font-weight: bold;
+    text-align: center;
+}
+
+#info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Footer */
 footer {
     text-align: center;
     margin-top: 50px;
     color: #666;
     font-size: 14px;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
