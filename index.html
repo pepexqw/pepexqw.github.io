@@ -4,61 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Моя личная страница</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            padding: 50px 20px 20px 20px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .content {
-            max-width: 800px;
-            padding: 20px;
-        }
-        a {
-            color: #00ffff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
         <h1>Привет, я Sollltex</h1>
         <p>Добро пожаловать на мою страницу</p>
+        <button id="changeThemeBtn">Сменить тему</button>
     </header>
-    <div class="content">
-        <section>
-            <h2>О себе</h2>
-            <p>Здесь вы можете рассказать о себе, своих увлечениях и проектах.</p>
-        </section>
-        <section>
-            <h2>Контакты</h2>
-            <p>Связаться со мной можно по email или через соцсети.</p>
-            <ul>
-                <li><a href="mailto:youremail@example.com">youremail@example.com</a></li>
-                <!-- Добавьте ссылки на соцсети -->
-                <li><a href="https://github.com/sollltex" target="_blank">GitHub</a></li>
-                <!-- Другие соцсети -->
-            </ul>
-        </section>
-    </div>
+
+    <section class="about">
+        <h2>О себе</h2>
+        <p>Здесь вы можете рассказать о себе, своих увлечениях и проектах.</p>
+    </section>
+
+    <section class="contacts">
+        <h2>Контакты</h2>
+        <ul>
+            <li><a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li><a href="https://github.com/sollltex" target="_blank">GitHub</a></li>
+            <!-- добавьте другие соцсети -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
