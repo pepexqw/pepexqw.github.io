@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #121212;
+  background-color: #000;
   color: #eee;
   line-height: 1.6;
   transition: background-color 0.5s, color 0.5s;
@@ -16,55 +16,45 @@ body {
 }
 
 /* Заголовки */
-h1, h2 {
-  margin-bottom: 15px;
-}
-
 h1 {
-  font-size: 2.5em;
+  font-size: clamp(2em,5vw,3em);
 }
-
 h2 {
-  font-size: 2em;
+  font-size: clamp(1.5em,4vw,2.5em);
+}
+p {
+  font-size:1.1em;
 }
 
 /* Кнопка переключения темы */
 .btn {
   background-color: transparent;
   border: 2px solid #eee;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+  padding:10px 20px;
+  cursor:pointer;
+  font-size:1em;
+  border-radius:8px;
+  transition:.3s all;
 }
-
 .btn:hover {
-   background-color: #333;
-   transform: scale(1.05);
-   border-color: #fff;
+   background-color:#222;
+   transform:scale(1.05);
 }
 
 /* Секции */
 .section {
-  padding: 50px 20px;
+  padding:50px 20px;
 }
-
 .header {
-  background-image: linear-gradient(135deg, #222, #444);
-  text-align: center;
+  background-image: linear-gradient(135deg,#222,#444);
+  text-align:center;
 }
-
 .title {
-   font-size: clamp(2em,5vw,3em);
    margin-bottom:10px;
 }
-
 .subtitle {
-   font-size: clamp(1em,3vw,1.5em);
    margin-bottom:20px;
 }
-
 /* Ссылки */
 a {
    color:#00ffff; 
@@ -72,22 +62,29 @@ a {
    transition:.3s all;
 }
 a:hover {
-   text-decoration underline; 
+   text-decoration:underline; 
    color:#fff; 
 }
-
 /* Эффекты при наведении на секции */
 .section:hover {
    box-shadow: inset -10px -10px #222, inset10px10px #222; 
    transition:.3s box-shadow; 
 }
-
-/* Анимации для элементов */
-@keyframes fadeInUp {
- from {opacity:0; transform: translateY(20px);}
- to {opacity:1; transform:none;}
+/* Список проектов */
+.project-list {
+ list-style:none; 
+ padding-left:0; 
 }
-.section h2 {
- animation: fadeInUp .8s ease-out forwards; 
- opacity:.8; 
+.project-list li {
+ margin-bottom:10px; 
+}
+.project-list a {
+ color:#ffcc00; 
+ font-weight:bold; 
+ font-size:1.2em; 
+ transition:.3s all; 
+}
+.project-list a:hover {
+ color:#fff; 
+ transform:translateX(5px); 
 }
