@@ -1,25 +1,49 @@
-console.log("Привет от Pepexqw_! Удачи в кодинге :)");
-console.log("( помощь с сайтом @minifirstoffc )");
-function updateTime() {
-    const now = new Date().toLocaleString("ru-RU", {
-        timeZone: "Europe/Moscow",
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-    });
-    document.getElementById("time").textContent = "Время: " + now;
-}
-setInterval(updateTime, 1000);
-updateTime();
+// Изначально устанавливаем темную тему
+const body = document.body;
+const themeButton = document.getElementById('theme-toggle');
+const langButton = document.getElementById('lang-toggle');
+const title = document.getElementById('title');
+const intro = document.getElementById('intro');
 
-// Получение погоды через Open-Meteo API
-fetch('https://api.open-meteo.com/v1/forecast?latitude=55.75&longitude=37.61&current=temperature_2m,weathercode&timezone=Europe%2FMoscow')
-    .then(res => res.json())
-    .then(data => {
-        const temp = data.current.temperature_2m;
-        document.getElementById("weather").textContent = `Погода: ${temp}°C`;
-    })
-    .catch(err => {
-        document.getElementById("weather").textContent = "Не удалось загрузить погоду 😢";
-        console.error(err);
-    });
+let currentTheme = 'dark'; // или 'light'
+let currentLanguage = 'ru'; // или 'en'
+
+// Функция переключения темы
+function toggleTheme() {
+    if (currentTheme === 'dark') {
+        currentTheme = 'light';
+        body.classList.remove('dark');
+        body.classList.add('light');
+        themeButton.textContent = 'Переключить тему'; // Можно оставить так или изменить
+    } else {
+        currentTheme = 'dark';
+        body.classList.remove('light');
+        body.classList.add('dark');
+        themeButton.textContent = 'Переключить тему';
+    }
+}
+
+// Функция переключения языка
+function toggleLanguage() {
+    if (currentLanguage === 'ru') {
+        currentLanguage = 'en';
+        title.textContent = 'Welcome to my page';
+        intro.textContent = 'This is my personal page. Here you can find information about me.';
+        langButton.textContent = 'Русский';
+        document.documentElement.lang = 'en';
+    } else {
+        currentLanguage = 'ru';
+        title.textContent = 'Добро пожаловать на мою страницу';
+        intro.textContent = 'Это моя личная страница. Здесь вы можете найти информацию обо мне.';
+        langButton.textContent = 'English';
+        document.documentElement.lang = 'ru';
+    }
+}
+
+// Обработчики событий
+themeButton.addEventListener('click', toggleTheme);
+langButton.addEventListener('click', toggleLanguage);
+
+// Инициализация начального состояния
+// Можно установить начальную тему и язык при загрузке страницы, если нужно
+body.classList.add(currentTheme);
