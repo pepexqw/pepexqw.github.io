@@ -23,6 +23,20 @@ header {
     padding: 20px 0;
 }
 
+.avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 100px; /* Радиус 100px */
+    height: 100px;
+    object-fit: cover;
+}
+
 nav ul {
     list-style: none;
     display: flex;
