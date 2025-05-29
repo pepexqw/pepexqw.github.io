@@ -1,54 +1,93 @@
-/* Основные стили для светлой темы */
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #222;
-    margin: 0;
-    padding: 20px;
-    transition: background-color 0.5s, color 0.5s;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #eee;
+  line-height: 1.6;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
+/* Контейнер для центрирования */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+  margin-bottom: 15px;
 }
 
 h1 {
-    margin-bottom: 10px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-/* Стиль для разделов */
-section {
-    max-width: 800px;
-    margin: 40px auto;
+  font-size: 2.5em;
 }
 
 h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
+  font-size: 2em;
 }
 
+/* Кнопка переключения темы */
+.btn {
+  background-color: transparent;
+  border: 2px solid #eee;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+   background-color: #333;
+   transform: scale(1.05);
+   border-color: #fff;
+}
+
+/* Секции */
+.section {
+  padding: 50px 20px;
+}
+
+.header {
+  background-image: linear-gradient(135deg, #222, #444);
+  text-align: center;
+}
+
+.title {
+   font-size: clamp(2em,5vw,3em);
+   margin-bottom:10px;
+}
+
+.subtitle {
+   font-size: clamp(1em,3vw,1.5em);
+   margin-bottom:20px;
+}
+
+/* Ссылки */
 a {
-    color: #007acc;
+   color:#00ffff; 
+   text-decoration:none; 
+   transition:.3s all;
 }
-
 a:hover {
-    text-decoration: underline;
+   text-decoration underline; 
+   color:#fff; 
 }
 
-/* Тёмная тема */
-body.dark-mode {
-    background-color: #222;
-    color: #f0f0f0;
+/* Эффекты при наведении на секции */
+.section:hover {
+   box-shadow: inset -10px -10px #222, inset10px10px #222; 
+   transition:.3s box-shadow; 
 }
 
-body.dark-mode a {
-    color: #66ccff;
+/* Анимации для элементов */
+@keyframes fadeInUp {
+ from {opacity:0; transform: translateY(20px);}
+ to {opacity:1; transform:none;}
+}
+.section h2 {
+ animation: fadeInUp .8s ease-out forwards; 
+ opacity:.8; 
 }
