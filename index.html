@@ -3,22 +3,42 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Моя личная страница</title>
+    <title>Denis Ampleev - Личная страница</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
-        <h1 id="title">Добро пожаловать на мою страницу</h1>
-        <div class="controls">
-            <button id="theme-toggle">Переключить тему</button>
-            <button id="lang-toggle">English</button>
-        </div>
+        <h1>Denis Ampleev</h1>
+        <p>Профессиональный разработчик</p>
+        <a href="https://github.com/pepexqw" target="_blank">Мой GitHub</a>
     </header>
 
-    <section id="content">
-        <p id="intro">Это моя личная страница. Здесь вы можете найти информацию обо мне.</p>
-        <!-- Можно добавить больше контента -->
+    <section id="about">
+        <h2>О себе</h2>
+        <p>Я — разработчик, увлечённый созданием веб-приложений и сайтов. Люблю учиться новому и делиться знаниями.</p>
     </section>
+
+    <section id="skills">
+        <h2>Навыки</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Vue.js</li>
+            <li>Node.js, Express</li>
+            <li>Базы данных: MySQL, MongoDB</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Проекты</h2>
+        <ul id="project-list">
+            <!-- Проекты будут добавляться динамически -->
+        </ul>
+        <button id="loadProjectsBtn">Показать мои проекты</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Denis Ampleev</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
